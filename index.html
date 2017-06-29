@@ -1,0 +1,101 @@
+<html>
+<head>
+<script src = 'http://kejian.jirengu.com/static/js/jquery-1.11.1.min.js'></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 284px;
+            height: 220px;
+        }
+        .layout{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .container:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class = 'layout'>
+    <ul class ='container'>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/1.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/2.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/3.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/4.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/5.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/6.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/7.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/8.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/9.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/10.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/11.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/12.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/13.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/14.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/15.jpg'></li>
+        <li><img src ='http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg' data-src = 'http://cdn.jirengu.com/book.jirengu.com/img/16.jpg'></li>
+    </ul>
+    </div>
+</body>
+
+<script>
+ lazyLoad();
+ var clock 
+ $(window).on('scroll', function(){
+    if(clock){
+      clearTimeout(clock);
+    }
+      clock = setTimeout(function(){
+      console.log('hello');
+      lazyLoad();
+    }, 500);
+ });
+
+ //首先判断图片位置是否出现在屏幕可见范围内
+ function isVisible($node){
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var offsetTop = $($node).offset().top;
+    if(offsetTop < scrollTop + windowHeight && offsetTop > scrollTop) {
+      return true
+    }
+    return false
+ }
+ //如果图片出现在可见范围内，分为两种情况，分别为已经加载和未加载
+ function isLoaded($node){
+    return $($node).attr('src') === $($node).attr('data-src');
+ }
+ //如果未加载，则执行加载
+ function loadImg($node){
+    $($node).attr('src', $($node).attr('data-src'));
+ }
+ //将上述函数整合
+ function lazyLoad(){
+    $('img').each(function(){
+      if( isVisible(this) && !isLoaded(this)){
+        loadImg(this);
+      }
+    })
+ }
+
+
+
+
+
+
+
+</script>
+</html>
